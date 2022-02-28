@@ -8,7 +8,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 require('dotenv').config()
   
-//use bodyparser
+//use bodyparser - deprecated. change all to express
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(bodyParser.json());
