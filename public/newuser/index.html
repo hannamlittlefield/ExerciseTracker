@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise Tracker</title>
+    <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="/public/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">Exercise Tracker</h1>
+        <div class="logincontainer">
+            <form action="/api/users" method="post">
+                <h3 id="formheader">Create New User</h3>
+                <input id="uname" type="text" name="username" placeholder="username">
+                <input id="password" type="text" name="password" placeholder="password">
+                <input id="email" type="text" name="email" placeholder="email@domain">
+                <select id="gender" type="text" name="password" placeholder="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <input type="date" id="dob" name="dob"
+                    min="1950-01-01" max="2022-03-03">
+                <input type="submit" value="Submit">
+            </form>
+      </div>
+    <script>
+      const exerciseForm = document.getElementById("exercise-form");
+
+      exerciseForm.addEventListener("submit", () => {
+        const userId = document.getElementById("uid").value;
+        exerciseForm.action = `/api/users/${userId}/exercises`;
+
+        exerciseForm.submit();
+      });
+    </script>
+  </body>
+</html>
