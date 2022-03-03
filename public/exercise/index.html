@@ -13,21 +13,18 @@
   <body>
     <div class="container">
       <h1 class="title">Exercise Tracker</h1>
-      <form action="/api/users" method="post">
-        <h3 id="formheader">Create a New User</h3>
-        <p><code>POST /api/users</code></p>
-        <input id="uname" type="text" name="username" placeholder="username">
-        <input type="submit" value="Submit">
-      </form>
-      <form id="exercise-form" method="post">
-        <h3 id="formheader">Add exercises</h3>
-        <p><code>POST /api/users/:_id/exercises</code></p>
-        <input id="uid" type="text" name=":_id" placeholder=":_id">
-        <input id="desc" type="text" name="description" placeholder="description*">
-        <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
-        <input id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd)">
-        <input type="submit" value="Submit">
-      </form>
+      <div class="exercisecont">
+        <form id="exercise-form" method="post">
+          <h3 id="formheader">Add exercises</h3>
+          <p><code>POST /api/users/:_id/exercises</code></p>
+          <input id="uid" type="text" name=":_id" placeholder=":_id">
+          <input id="desc" type="text" name="description" placeholder="description*">
+          <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
+          <input type="date" id="dob" name="dob"
+            min="2022-01-01" max="2034-03-03">
+          <input type="submit" value="Submit">
+        </form>
+      </div>
       <p>
         <strong>GET user's exercise log: </strong>
         <code>GET /api/users/:_id/logs?[&amp;from][&amp;to][&amp;limit]</code>
