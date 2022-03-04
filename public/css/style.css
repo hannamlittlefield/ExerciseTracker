@@ -84,3 +84,12 @@ code {
 .exercisecont{
   text-align: center;
 }
+
+#gender{
+  width: 100%;
+  height: 30px;
+}
+
+#dob{
+  margin-top: 10px;
+}

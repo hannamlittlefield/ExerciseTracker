@@ -27,6 +27,7 @@ const listener = app.listen(process.env.PORT || 3000, () => {
 //connect to mongoose w url
 mongoose.connect('mongodb+srv://hlittlefield:Tonkatruck4!@cluster0.tlijw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true}, {useUnifiedTopology: true});
 
+
 //connect Schema var to mongoose
 const Schema = mongoose.Schema
 

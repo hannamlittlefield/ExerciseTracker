@@ -14,7 +14,7 @@
     <div class="container">
       <h1 class="title">Exercise Tracker</h1>
         <div class="logincontainer">
-            <form action="/api/users" method="post">
+            <form action="/api/users" method="post" id="loginForm">
                 <h3 id="formheader">Login</h3>
                 <input id="uname" type="text" name="username" placeholder="username">
                 <input id="password" type="password" name="password" placeholder="password">
@@ -26,13 +26,13 @@
             </form>
       </div>
     <script>
-      const exerciseForm = document.getElementById("exercise-form");
+      const loginForm = document.getElementById("logincontainer");
 
-      exerciseForm.addEventListener("submit", () => {
+      loginForm.addEventListener("submit", () => {
         const userId = document.getElementById("uid").value;
-        exerciseForm.action = `/api/users/${userId}/exercises`;
+        loginForm.action = `/api/users/${userId}/exercises`;
 
-        exerciseForm.submit();
+        loginForm.submit();
       });
     </script>
   </body>
